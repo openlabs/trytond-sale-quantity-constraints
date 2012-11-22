@@ -18,6 +18,15 @@ class Product(ModelSQL, ModelView):
     order_multiple = fields.Float('Quantity Multiple')
     order_maximum = fields.Float('Maximum Quantity')
 
+    def default_order_minimum(self):
+        return 1.0
+
+    def default_order_multiple(self):
+        return 1.0
+
+    def default_order_maximum(self):
+        return 100.0
+
 Product()
 
 
