@@ -21,18 +21,18 @@ for dep in info.get('depends', []):
 requires.append('trytond >= %s.%s, < %s.%s' %
         (major_version, minor_version, major_version, minor_version + 1))
 
-setup(name='trytond_sale_quantity_contraints',
+setup(name='trytond_sale_quantity_constraints',
     version=info.get('version', '0.0.1'),
     description=info.get('description', ''),
     author=info.get('author', ''),
     author_email=info.get('email', ''),
     url=info.get('website', ''),
-    package_dir={'trytond.modules.sale_quantity_contraints': '.'},
+    package_dir={'trytond.modules.sale_quantity_constraints': '.'},
     packages=[
-        'trytond.modules.sale_quantity_contraints',
+        'trytond.modules.sale_quantity_constraints',
     ],
     package_data={
-        'trytond.modules.sale_quantity_contraints': info.get('xml', []) \
+        'trytond.modules.sale_quantity_constraints': info.get('xml', []) \
                 + info.get('translation', []),
     },
     classifiers=[
@@ -53,7 +53,7 @@ setup(name='trytond_sale_quantity_contraints',
     zip_safe=False,
     entry_points="""
     [trytond.modules]
-    sale_quantity_contraints = trytond.modules.sale_quantity_contraints
+    sale_quantity_constraints = trytond.modules.sale_quantity_constraints
     """,
     #test_suite='tests',
     #test_loader='trytond.test_loader:Loader',
