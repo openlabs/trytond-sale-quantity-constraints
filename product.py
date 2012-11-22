@@ -14,9 +14,9 @@ class Product(ModelSQL, ModelView):
     "Product"
     _name = 'product.product'
 
-    order_minimum = fields.Float('Minimum Order Quantity')
-    order_multiple = fields.Float('Order Quantity Multiple')
-    order_maximum = fields.Float('Maximum Order Quantity')
+    order_minimum = fields.Float('Minimum Quantity')
+    order_multiple = fields.Float('Quantity Multiple')
+    order_maximum = fields.Float('Maximum Quantity')
 
 Product()
 
