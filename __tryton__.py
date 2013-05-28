@@ -11,7 +11,7 @@
             * Order Quantity Multiple
             * Maximum Order Quantity
     ''',
-    'version': '2.4.0.1',
+    'version': '2.4.1.0',
     'author': 'Openlabs Technologies & Consulting (P) LTD',
     'email': 'info@openlabs.co.in',
     'website': 'http://www.openlabs.co.in/',
