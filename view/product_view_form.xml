@@ -1,0 +1,14 @@
+<data>
+  <xpath expr="//field[@name='code']" position="after">
+        <newline/>
+        <separator colspan="4" string="Order Quantity Constraints" id="order_qty_constraints"/>
+        <group id="grp_constraints" colspan="4" col="10">
+            <label name="order_minimum" />
+            <field name="order_minimum"/>
+            <label name="order_multiple" />
+            <field name="order_multiple"/>
+            <label name="order_maximum" />
+            <field name="order_maximum"/>
+        </group>
+    </xpath>
+</data>
