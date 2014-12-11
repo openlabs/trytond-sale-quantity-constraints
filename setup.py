@@ -94,6 +94,8 @@ major_version = int(major_version)
 minor_version = int(minor_version)
 
 requires = []
+MODULE = "sale_quantity_constraints"
+PREFIX = "openlabs"
 
 for dep in info.get('depends', []):
     if not re.match(r'(ir|res|webdav)(\W|$)', dep):
@@ -110,7 +112,7 @@ requires.append(
 
 
 setup(
-    name='trytond_sale_quantity_constraints',
+    name='%s_%s' % (PREFIX, MODULE),
     version=info.get('version'),
     description='''
         Check the quantity of the product while creating sale lines
@@ -134,15 +136,12 @@ setup(
         'Topic :: Office/Business',
     ],
     packages=[
-        'trytond.modules.sale_quantity_constraints',
-        'trytond.modules.sale_quantity_constraints.tests',
+        'trytond.modules.%s' % MODULE,
+        'trytond.modules.%s.tests' % MODULE,
     ],
-    package_dir={
-        'trytond.modules.sale_quantity_constraints': '.',
-        'trytond.modules.sale_quantity_constraints.tests': 'tests',
-    },
+    package_dir={'trytond.modules.%s' % MODULE: '.'},
     package_data={
-        'trytond.modules.sale_quantity_constraints': info.get('xml', [])
+        'trytond.modules.%s' % MODULE: info.get('xml', [])
         + ['tryton.cfg', 'tests/*.py', 'view/*.xml']
     },
     license='GPL-3',
@@ -150,8 +149,8 @@ setup(
     zip_safe=False,
     entry_points="""
     [trytond.modules]
-    sale_quantity_constraints = trytond.modules.sale_quantity_constraints
-    """,
+    %s = trytond.modules.%s
+    """ % (MODULE, MODULE),
     test_suite='tests.suite',
     test_loader='trytond.test_loader:Loader',
     cmdclass={
