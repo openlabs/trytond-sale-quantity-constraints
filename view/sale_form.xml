@@ -1,0 +1,7 @@
+<data>
+    <xpath expr="//field[@name=&quot;currency&quot;]" position="after">
+        <newline/>
+        <label name="qty_strict_check"/>
+        <field name="qty_strict_check"/>
+    </xpath>
+</data>
